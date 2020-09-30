@@ -3,6 +3,10 @@
 #include<algorithm>
 #include<vector>
 
+bool f(int x, int y)//comparator function return true/false declared in global space
+{
+    return x>y;
+}
 using namespace std;
 int main()
 {
@@ -42,7 +46,7 @@ int main()
     cout<<it2-it<<endl;//iterators in vectors are random in O(1) time // 9-4=5 //Gives the count of occurence of 100 s
 
     //sorting in descending order
-   //overloaded function by passing a comparator function f
+    sort(A.begin(),A.end(),f);//overloaded function by passing a comparator function f
 
     //Printing the elements of the vector
 

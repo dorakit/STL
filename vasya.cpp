@@ -29,7 +29,23 @@ for(int i=1;i<n;i++) second[A[i]]++; // not=1 since array can have duplicates
 
 long long sdash=0;
 
+for(int i=0;i<n;i++)
+{
 
+    sdash+=A[i];//Sum of the first i numbers
+    if(sdash==S/2){
+        cout<<"YES\n";
+        return 0;
+        }
+
+        if(sdash<S/2){
+            long long x=S/2-sdash;
+            //delete element from second half , and insert into first half
+            if(second[x]>0){
+                cout<<"YES\n";
+                return 0;
+            }
+        }
         else//if sdash is greater
             {
             long long y=sdash-S/2;
@@ -37,7 +53,11 @@ long long sdash=0;
                 cout<<"YES\n";
                 return 0;
             }
-       
+        }
+        //i+1 added to first and removed from second
+        first[A[i+1]]++;
+        second[A[i+1]]--;
+}
 
 cout<<"NO\n";
 }
