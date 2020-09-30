@@ -157,10 +157,14 @@ void Powerofstl()
     int point;
     cin>>point;
     auto it=S.upper_bound({point,INT_MAX});
-   
-   \\\Find if a point is lying in a given interval
-   
-   
+    if(it==S.begin())//When point is 1 an upper bound of it points towards {2,3} i.e. S.begin() then it-- doesn't exist even!!
+    {
+                cout<<"the given point is not lying in any interval..\n";
+                return;
+
+    }
+    it--;//When point is 401 an upperbound of it points towards S.end() which after it-- points towards {401,450}
+    pair<int,int>current=*it;
     if(current.first<=point && point<=current.second)
     {
         cout<<"Yes It's present:"<<current.first<<" "<<current.second<<endl;
@@ -171,4 +175,11 @@ void Powerofstl()
     }
 }
 
-/////main function missing
+int main()
+{
+   /*set_demo();
+   vector_demo();
+   mapDemo();*/
+    //C++ STL
+    Powerofstl();
+}
