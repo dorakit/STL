@@ -18,5 +18,11 @@ using namespace std;
 int main()
 {
     ll a;
-   
+   for(int i=0;;i++)
+   {
+       cin>>a;
+       if(a==42) break;
+       else
+       cout<<a<<endl;
+   }
 }
