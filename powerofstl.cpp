@@ -4,6 +4,7 @@
 #include<vector> // Vectors
 #include<set> //Sets
 #include <map>//Maps
+#include<queue> // Queues
 #include<utility>
 
 using namespace std;
@@ -69,6 +70,33 @@ void vector_demo()//Array needs to be sorted again and again after inserting new
     }
     cout<<endl;
 }
+void showQueue(queue <int> gq) 
+{ 
+    queue <int> g = gq; 
+    while (!g.empty()) 
+    { 
+        cout << '\t' << g.front(); 
+        g.pop(); 
+    } 
+    cout << '\n'; 
+} 
+void queue_demo(){
+     queue <int> gquiz; 
+    gquiz.push(10); 
+    gquiz.push(20); 
+    gquiz.push(30); 
+  
+    cout << "The queue gquiz is : "; 
+    showQueue(gquiz); // 10 20 30 
+  
+    cout << "\ngquiz.size() : " << gquiz.size(); //3
+    cout << "\ngquiz.front() : " << gquiz.front(); //10
+    cout << "\ngquiz.back() : " << gquiz.back(); //30
+  
+    cout << "\ngquiz.pop() : "; // eliminate front element
+    gquiz.pop();  // now queue is 20 30 
+    showq(gquiz); // 20 30 
+} 
 
 void set_demo()
 {
