@@ -1,2 +1,2 @@
 # STL
-Learn STL in C++
+Beginner friendly Repository to contribute and learn STL
